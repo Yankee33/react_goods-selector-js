@@ -18,7 +18,7 @@ export const goods = [
 export const App = () => {
   const [selectedGood, setSelectedGood] = useState('Jam');
 
-  const chosenProduct = good => {
+  const selectProduct = good => {
     if (good === selectedGood) {
       setSelectedGood('');
     } else {
@@ -64,7 +64,7 @@ export const App = () => {
                     data-cy={buttonCy}
                     type="button"
                     className={buttonClass}
-                    onClick={() => chosenProduct(good)}
+                    onClick={() => selectProduct(good)}
                   >
                     {buttonText}
                   </button>
